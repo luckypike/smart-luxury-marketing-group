@@ -21,6 +21,7 @@ import {trigger, state, animate, style, transition} from '@angular/core';
 })
 export class AppComponent implements OnInit {
   isMenuVisible: boolean = false;
+  isMenuUp: boolean = false;
 
   ngOnInit() {
   }

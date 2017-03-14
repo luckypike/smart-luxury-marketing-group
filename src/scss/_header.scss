@@ -1,12 +1,18 @@
 .header {
   display: flex;
   padding: $margin-s $gutter;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 
   &_logo {
     background: red;
     width: 10rem;
     height: 2rem;
     margin-right: auto;
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
   }
 
   &_hb {
@@ -55,6 +61,11 @@
         transform: translateY(0);
       }
     }
+  }
+
+  &.header_menu_up {
+    opacity: 0;
+    transform: translateY(-100%);
   }
 }
 
