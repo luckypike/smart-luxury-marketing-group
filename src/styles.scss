@@ -1,3 +1,39 @@
 @import "~breakpoint-sass";
 @import '~reset-css/reset';
 
+* {
+  box-sizing: border-box;
+}
+
+$s: 48rem;
+$m: 60rem;
+$l: 80rem;
+
+$light-color: #fff;
+
+$gutter: 1rem;
+$margin-s: 0.5rem;
+$margin-m: 1.5rem;
+$margin-l: 3rem;
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.preloader {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body, .app {
+  min-height: 100vh;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+@import 'scss/header';
