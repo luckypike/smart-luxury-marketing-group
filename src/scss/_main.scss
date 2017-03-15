@@ -1,0 +1,66 @@
+.main {
+  &_contacts {
+    max-width: $xl;
+    margin: $margin-l auto;
+
+    .city, .feedback {
+      padding: 0 $gutter;
+    }
+
+    .city {
+      margin-bottom: $margin-m;
+
+      .title {
+        margin-bottom: $margin-s;
+      }
+
+      .address {
+        font-size: 0.875rem;
+        color: $grey-color;
+      }
+    }
+
+    .feedback {
+      font-size: 0.875rem;
+      color: $grey-color;
+      margin-top: $margin-l;
+
+      .btn {
+        margin-bottom: $margin-xs;
+      }
+
+      .phone {
+        font-size: 1rem;
+        color: $primary-color;
+      }
+
+    }
+
+    @include breakpoint($s) {
+      display: flex;
+      margin: ($margin-l * 2) auto;
+
+      .city, .feedback {
+        width: 25%;
+      }
+
+      .city {
+        margin-bottom: 0;
+      }
+
+      .feedback {
+        margin-top: 0;
+      }
+    }
+
+    @include breakpoint($l) {
+      .city, .feedback {
+        width: 2 / 12 * 100%;
+      }
+
+      .feedback {
+        margin-left: auto;
+      }
+    }
+  }
+}

@@ -1,7 +1,35 @@
-<p>
-  <a [routerLink]="['']">Close</a>
-</p>
+<div class="fb_form">
+  <div class="fb_form_close">
+    <a [routerLink]="['']">&larr; Закрыть</a>
+  </div>
 
-<p>
-  feedback works!
-</p>
+  <div class="fb_form_desc">
+    <p>
+      Вероятнее всего ваше сообщение будет отправлено на почту, доступ к которой уже давно потерян, поэтому и письма мы не увидим.
+    </p>
+
+    <p>
+      Но возможно все-таки ваше сообщение попадёт к кому-то из наших сотрудников, а почту он проверяет раз в неделю, поэтому наберитесь терпения. Ну везде же ставят «формы обратной связи», поэтому и мы добавили тоже.
+    </p>
+  </div>
+
+  <div class="fb_form_body">
+    <form class="frm">
+      <div class="frm_in">
+        <input type="text" name="name" placeholder="Имя">
+      </div>
+
+      <div class="frm_in">
+        <input type="tel" name="phone" placeholder="Телефон">
+      </div>
+
+      <div class="frm_in">
+        <textarea name="message" placeholder="Сообщение"></textarea>
+      </div>
+
+      <div class="frm_in">
+        <button class="btn">Отправить</button>
+      </div>
+    </form>
+  </div>
+</div>

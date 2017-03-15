@@ -10,12 +10,22 @@ import { AppComponent } from './../../app.component';
   host: {'[@feedbackAnimation]': 'true'},
   animations: [
     trigger('feedbackAnimation', [
+      transition(':leave', [
+        style({
+          opacity: 1,
+          transform: 'translateY(0)'
+        }),
+        animate('0.25s ease-in', style({
+          opacity: 0,
+          transform: 'translateY(10rem)'
+        }))
+      ]),
       transition(':enter', [
         style({
           opacity: 0,
-          transform: 'translateY(20rem)'
+          transform: 'translateY(10rem)'
         }),
-        animate('0.3s ease-in-out', style({
+        animate('0.4s ease-in-out', style({
           opacity: 1,
           transform: 'translateY(0)'
         }))

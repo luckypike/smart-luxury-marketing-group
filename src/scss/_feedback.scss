@@ -7,5 +7,27 @@ main.feedback {
   top: 0;
   width: 100%;
   height: 100%;
+  z-index: 3;
 
+  display: flex;
+  flex-direction: column;
+
+  .fb_form {
+    margin: auto;
+    max-width: $s / 4 * 3;
+
+    &_close {
+      margin-bottom: $margin-m;
+
+      a {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 0.8125rem;
+      }
+    }
+
+    &_desc {
+      margin-bottom: $margin-m;
+    }
+  }
 }
