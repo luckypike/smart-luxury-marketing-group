@@ -1,4 +1,165 @@
 .main {
+
+
+  &_partners {
+    max-width: $xl;
+    margin: $margin-l auto;
+
+    .text {
+      padding: 0 $gutter;
+    }
+    .logos {
+      display: flex;
+
+      &_col {
+        width: 50%;
+        padding: 0 $gutter;
+
+        .logo {
+          @include aspect-ratio(3, 2);
+
+          .img {
+            // width: 100%;
+            height: 40px;
+            background: $grey-color;
+            top: 50%;
+            bottom: 0;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+
+    @include breakpoint($s) {
+      display: flex;
+      margin: ($margin-l * 2) auto;
+
+      .text {
+        width: 6 / 12 * 100%;
+        align-self: center;
+
+        p {
+          margin-bottom: 0;
+        }
+
+      }
+
+      .logos {
+        order: -1;
+        width: 6 / 12 * 100%;
+      }
+    }
+
+    @include breakpoint($m) {
+      // display: flex;
+
+      .text {
+        width: 4 / 12 * 100%;
+        margin: 0 1 / 12 * 100%;
+
+        // p {
+        //   margin-bottom: 0;
+        // }
+
+      }
+
+      .logos {
+
+        &_col {
+          width: 2 / 6 * 100%;
+          margin-left: 1 / 6 * 100%;
+        }
+        // order: -1;
+        // width: 6 / 12 * 100%;
+      }
+    }
+  }
+
+  &_countdown {
+    background: #f8f8f8;
+    padding: $margin-l 0;
+
+    .cntdwn {
+
+      &_wrapper {
+        max-width: $xl;
+        margin: auto;
+      }
+
+      padding: 0 $gutter;
+      margin: auto;
+
+      .text {
+        text-align: center;
+      }
+    }
+
+    .countdown {
+      margin-top: $margin-l;
+
+
+      .clock {
+        // width: 2 / 8 * 100%;
+      }
+
+      .digits {
+        display: flex;
+        // width: 6 / 8 * 100%;
+      }
+
+      .digit {
+        // @include aspect-ratio(1, 1);
+
+        background: $light-color;
+        border-radius: 6px;
+
+        padding: $margin-m 0 $margin-s;
+        width: 1 / 5  * 100%;
+        margin-right: 8px;
+        text-align: center;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .val {
+          font-size: 1.5rem;
+          font-weight: 300;
+          font-family: 'Open Sans', sans-serif;
+        }
+      }
+    }
+
+    @include breakpoint($s) {
+      padding: $margin-l * 2 0;
+
+      .countdown {
+        display: flex;
+
+        .clock {
+          width: 2 / 8 * 100%;
+        }
+
+        .digits {
+          width: 6 / 8 * 100%;
+        }
+
+        .digit {
+          .val {
+            font-size: 2.8125rem;
+            line-height: 3rem;
+          }
+        }
+      }
+    }
+
+    @include breakpoint($m) {
+      .cntdwn {
+        width: 8 / 12 * 100%;
+      }
+    }
+  }
+
   &_contacts {
     max-width: $xl;
     margin: $margin-l auto;
