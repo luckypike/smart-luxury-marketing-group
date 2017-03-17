@@ -1,4 +1,74 @@
 .main {
+  &_managers {
+    &_wrapper {
+      max-width: $xl;
+      margin: $margin-l auto;
+    }
+
+    .text {
+      padding: 0 $gutter;
+    }
+
+    .manager {
+      margin-bottom: $margin-m;
+      padding: 0 $gutter;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .img {
+        @include aspect-ratio(1, 1);
+
+        background: #f8f8f8;
+        margin-bottom: $margin-s;
+      }
+
+      h3 {
+        margin-bottom: $margin-xs;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    @include breakpoint($s) {
+      .managers {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .manager {
+        width: 50%;
+      }
+    }
+
+    @include breakpoint($m) {
+      .text {
+        padding: 0;
+
+        h2 {
+          text-align: center;
+        }
+
+        p {
+          width: 50%;
+          margin-left: 25%;
+          padding-left: $gutter;
+        }
+      }
+
+      .manager {
+        width: 25%;
+
+        .img {
+          @include aspect-ratio-modify(4, 5);
+        }
+      }
+    }
+  }
+
   &_boss {
     padding-top: $margin-l;
     // @include aspect-ratio(1, 1);
