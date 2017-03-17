@@ -1,5 +1,72 @@
 .main {
+  &_projects {
+    max-width: $xl;
+    margin: 0 auto $margin-l;
 
+    > div {
+      padding: 0 $gutter;
+      margin-bottom: $margin-m;
+      width: 100%;
+    }
+
+    .project {
+      &_left, &_right {
+        text-align: center;
+
+        h3 {
+          margin-bottom: $margin-xs;
+        }
+
+        p {
+          color: #999999;
+        }
+
+        .img {
+          @include aspect-ratio(1, 1);
+
+          background: #f8f8f8;
+          margin-bottom: $margin-s;
+          width: 100%;
+        }
+      }
+    }
+
+    @include breakpoint($s) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto $margin-l * 2;
+
+      .project {
+        &_left, &_right {
+          width: 50%;
+          margin-bottom: 0;
+
+
+          .img {
+            @include aspect-ratio-modify(3, 2);
+          }
+
+          p {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    @include breakpoint($m) {
+      .project_left {
+        width: 8 / 12 * 100%;
+      }
+
+      .project_right {
+        width: 4 / 12 * 100%;
+
+        .img {
+          @include aspect-ratio-modify(2, 2.76);
+        }
+      }
+    }
+  }
 
   &_warranty {
     background: {
