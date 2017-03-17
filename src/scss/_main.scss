@@ -1,6 +1,61 @@
 .main {
 
 
+  &_warranty {
+    background: {
+      color: #0b0e10;
+      image: url('assets/warranty.jpg');
+      size: cover;
+      position: center bottom;
+    }
+
+    color: $light-color;
+    padding: $margin-l 0;
+
+    .text {
+      padding: 0 $gutter;
+      margin-bottom: 12rem;
+
+      ul {
+        li {
+          margin-bottom: $margin-s;
+        }
+      }
+    }
+
+    &_wrapper {
+      max-width: $xl;
+      margin: auto;
+    }
+
+    @include breakpoint($s) {
+      padding: $margin-l * 2 0;
+
+      .text {
+        width: 6 / 12 * 100%;
+        margin-left: 5 / 12 * 100%;
+      }
+    }
+
+    @include breakpoint($l) {
+      .text {
+        margin-bottom: 18rem;
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+
+          margin: 0 (-$gutter);
+
+          li {
+            padding: 0 $gutter;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
   &_partners {
     max-width: $xl;
     margin: $margin-l auto;

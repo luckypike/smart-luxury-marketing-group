@@ -110,6 +110,18 @@ a {
 
 p {
   margin-bottom: $margin-s;
+
+  &.vstup {
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+
+    @include breakpoint($s) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
 }
 
 h1, h2 {
