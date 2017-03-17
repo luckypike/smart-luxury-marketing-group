@@ -178,8 +178,16 @@
     }
 
     @include breakpoint($m) {
+      .text {
+        width: 8 / 12 * 100%;
+      }
+
       .project_left {
         width: 8 / 12 * 100%;
+
+        p {
+          margin: 0 (1 / 8 * 100%);
+        }
       }
 
       .project_right {
@@ -187,6 +195,14 @@
 
         .img {
           @include aspect-ratio-modify(2, 2.76);
+        }
+      }
+    }
+
+    @include breakpoint($l) {
+      .project_left {
+        p {
+          margin: 0 (2 / 8 * 100%);
         }
       }
     }
