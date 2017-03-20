@@ -1,7 +1,7 @@
 @import "~breakpoint-sass";
 @import '~reset-css/reset';
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300|PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,800|PT+Sans');
 
 * {
   box-sizing: border-box;
@@ -22,6 +22,10 @@ $margin-l: 3rem;
 $light-color: #fff;
 $primary-color: #212121;
 $grey-color: #999999;
+
+body {
+  background: $light-color;
+}
 
 .app {
   display: flex;
@@ -137,6 +141,17 @@ h1, h2, h3 {
   // }
 }
 
+h1 {
+  margin-bottom: $margin-m;
+  font-size: 2rem;
+  line-height: 2.25rem;
+
+  @include breakpoint($s) {
+    font-size: 2.8125rem;
+    line-height: 3rem;
+  }
+}
+
 h2 {
   margin-bottom: $margin-m;
   font-size: 1.5rem;
@@ -149,6 +164,7 @@ h2 {
 }
 
 h3 {
+  margin-bottom: $margin-xs;
   font-size: 1.25rem;
   line-height: 1.5rem;
 

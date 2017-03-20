@@ -1,7 +1,10 @@
 .header {
+  position: absolute;
   display: flex;
+  width: 100%;
   padding: $margin-s $gutter;
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  z-index: 2;
 
   &_logo {
     background: red;
@@ -77,6 +80,7 @@
     }
 
     &_nav {
+      background: none;
       flex-direction: row;
       justify-content: flex-end;
       opacity: 1;
@@ -85,11 +89,13 @@
       position: static;
       left: auto;
       top: auto;
+      transition: none;
 
       &_item {
         margin-left: $gutter;
         transform: none;
         opacity: 1;
+        transition: none;
       }
     }
   }
