@@ -2,15 +2,22 @@ import { Component, OnInit } from '@angular/core';
 
 import { AppComponent } from './../../app.component';
 
+declare var smoothScroll: any;
+
 @Component({
   selector: '.header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  constructor(private appComponent: AppComponent) { }
+  private ss: any;
+
+  constructor(private appComponent: AppComponent) {
+    this.ss = smoothScroll.init();
+  }
 
   ngOnInit() {
+
   }
 
   toggleMenu() {
