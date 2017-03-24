@@ -22,7 +22,8 @@
         "styles.scss"
       ],
       "scripts": [
-        "./../node_modules/smooth-scroll/dist/js/smooth-scroll.js"
+        "./../node_modules/smooth-scroll/dist/js/smooth-scroll.js",
+        "./../node_modules/scrollreveal/dist/scrollreveal.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
