@@ -7,14 +7,24 @@
   z-index: 2;
 
   &_logo {
-    background: red;
-    width: 10rem;
-    height: 2rem;
+    background:{
+      image: url('assets/logo.svg');
+      repeat: no-repeat;
+      size: 100%;
+    }
+    width: 100px;
+    height: 24px;
     margin-right: auto;
-    a {
-      display: block;
-      height: 100%;
-      width: 100%;
+    flex-shrink: 0;
+    margin-top: 4px;
+    // a {
+    //   display: block;
+    //   height: 100%;
+    //   width: 100%;
+    // }
+
+    @include breakpoint($s) {
+      margin-top: 18px;
     }
   }
 
@@ -56,12 +66,15 @@
       transition: opacity 0.3s, transform 0.3s;
 
       a {
-        color: #fff;
-        transition: color 0.4s;
+        @include breakpoint($s) {
+          color: #fff;
 
-        &:hover {
-          color: #000;
+          &:hover {
+            color: #000;
+          }
         }
+
+        transition: color 0.4s;
       }
     }
   }
