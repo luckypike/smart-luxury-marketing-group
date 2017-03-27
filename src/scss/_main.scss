@@ -106,7 +106,12 @@
       .img {
         @include aspect-ratio(1, 1);
 
-        background: #f0f8fe;
+        background: {
+          color: #f0f8fe;
+          position: center top;
+          size: cover;
+          repeat: no-repeat;
+        }
         margin-bottom: $margin-s;
       }
 
@@ -117,6 +122,53 @@
       p {
         margin-bottom: 0;
       }
+
+      &_komarova {
+        .img {
+          background-image: url('assets/komarova.jpg');
+        }
+      }
+
+      &_zaitseva {
+        .img {
+          background-image: url('assets/zaitseva.jpg');
+        }
+      }
+
+      &_marmeladova {
+        .img {
+          background-image: url('assets/marmeladova.jpg');
+
+          &:before {
+            background: {
+              color: #f0f8fe;
+              position: center top;
+              size: cover;
+              repeat: no-repeat;
+              image: url('assets/marmeladova_hover.jpg');
+              visibility: hidden;
+            }
+
+            opacity: 0;
+            transition: opacity 0.6s;
+            z-index: 2;
+          }
+
+          &:hover {
+            &:before {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+
+      &_bigalov {
+        .img {
+          background-image: url('assets/bigalov.jpg');
+        }
+      }
+
     }
 
     @include breakpoint($s) {
