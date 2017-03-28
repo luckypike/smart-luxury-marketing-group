@@ -42,7 +42,7 @@ export class IndexComponent implements OnInit {
   share() {
     this.fb.ui({
       method: 'share',
-      href: 'https://developers.facebook.com/docs/'
+      href: 'https://slmgroup.ru'
     });
   }
 }
