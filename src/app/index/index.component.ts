@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { AppComponent } from './../app.component';
 
+import { FacebookService } from 'ng2-facebook-sdk';
+
 @Component({
   selector: 'main.main',
   templateUrl: './index.component.html',
@@ -9,7 +11,13 @@ import { AppComponent } from './../app.component';
 })
 export class IndexComponent implements OnInit {
 
-  constructor(private appComponent: AppComponent) { }
+  constructor(private appComponent: AppComponent, private fb: FacebookService) {
+    this.fb.init({
+      appId: '1353041454752519',
+      xfbml: true,
+      version: 'v2.8'
+    });
+  }
 
   ngOnInit() {
     this.appComponent.sr.reveal('.manager', 240);
@@ -31,4 +39,10 @@ export class IndexComponent implements OnInit {
 
   }
 
+  share() {
+    this.fb.ui({
+      method: 'share',
+      href: 'https://developers.facebook.com/docs/'
+    });
+  }
 }

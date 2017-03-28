@@ -10,6 +10,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { FeedbackComponent } from './shared/feedback/feedback.component';
 
+import { FacebookService } from 'ng2-facebook-sdk';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,9 @@ import { FeedbackComponent } from './shared/feedback/feedback.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    FacebookService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

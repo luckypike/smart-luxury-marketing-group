@@ -47,6 +47,18 @@
 
   }
 
+  &_facebook {
+    background: #3C5A99;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    padding: $margin-xs $gutter;
+
+    span {
+      border-bottom: 1px solid #fff;
+    }
+  }
+
   &_welcome {
     max-width: $xl;
     margin: $margin-l auto;
