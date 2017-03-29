@@ -24,4 +24,10 @@ export class HeaderComponent implements OnInit {
     this.appComponent.isMenuVisible = !this.appComponent.isMenuVisible;
   }
 
+  hideMenu() {
+    this.appComponent.isMenuVisible = false;
+  }
+
+
+
 }

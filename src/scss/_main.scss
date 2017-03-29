@@ -50,30 +50,53 @@
   &_facebook {
     background: #3C5A99;
     color: #fff;
-    cursor: pointer;
+
     text-align: center;
     padding: $margin-s $gutter;
-    display: flex;
     justify-content: center;
+    align-items: flex-start;
+
+    .text {
+      margin-bottom: $margin-xs;
+    }
 
     .btn {
-      padding: 0 $gutter 0 32px;
+      padding: 0 $gutter 0 36px;
       color: #fff;
       border-color: #fff;
-      margin-left: $gutter * 2;
       position: relative;
 
       svg {
         position: absolute;
         left: 0;
-        top: 0;
+        bottom: -1;
         width: 28px;
         height: 28px;
+
+        fill: #ffffff;
+        transition: all 0.25s ease-in-out;
       }
 
       &:hover {
         background: #fff;
         color: #3C5A99;
+
+        svg {
+          fill: #3C5A99;
+        }
+      }
+    }
+
+    @include breakpoint($s) {
+      display: flex;
+
+      .btn {
+        margin-left: $gutter * 2;
+        flex-shrink: 0;
+      }
+
+      .text {
+        margin-bottom: 0;
       }
     }
   }

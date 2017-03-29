@@ -10,11 +10,11 @@
 
 </section>
 
-<div class="main_facebook" (click)="share()">
+<div class="main_facebook">
   <div class="text">
     Поделиться в фэйсбуке ссылкой, которая нахрен никому из ваших друзей в ленте не сдалась
   </div>
-  <div class="btn">
+  <div class="btn" (click)="share()">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 
 
@@ -386,3 +386,18 @@
     </div>
   </div>
 </section>
+
+<div class="main_facebook">
+  <div class="text">
+    Поделиться в фэйсбуке
+  </div>
+  <div class="btn" (click)="share()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+
+
+      <path id="f" class="st1" d="M16.6,24v-9.3h3.1l0.5-3.6h-3.6V8.8c0-1,0.3-1.8,1.8-1.8l1.9,0V3.8c-0.3,0-1.5-0.1-2.8-0.1  c-2.8,0-4.7,1.7-4.7,4.8v2.7H9.7v3.6h3.1V24H16.6z"/>
+    </svg>
+
+    Расшарить
+  </div>
+</div>
