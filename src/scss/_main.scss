@@ -52,10 +52,29 @@
     color: #fff;
     cursor: pointer;
     text-align: center;
-    padding: $margin-xs $gutter;
+    padding: $margin-s $gutter;
+    display: flex;
+    justify-content: center;
 
-    span {
-      border-bottom: 1px solid #fff;
+    .btn {
+      padding: 0 $gutter 0 32px;
+      color: #fff;
+      border-color: #fff;
+      margin-left: $gutter * 2;
+      position: relative;
+
+      svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 28px;
+        height: 28px;
+      }
+
+      &:hover {
+        background: #fff;
+        color: #3C5A99;
+      }
     }
   }
 
