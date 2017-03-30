@@ -27,7 +27,29 @@ main.feedback {
     }
 
     &_desc {
-      margin-bottom: $margin-m;
+      // margin-bottom: $margin-m;
+    }
+
+    &_thanx {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s;
+
+      &_sended {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &_body {
+
+      transition: opacity 0.3s, transform 0.4s;
+
+      &_sended {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(30px);
+      }
     }
   }
 }

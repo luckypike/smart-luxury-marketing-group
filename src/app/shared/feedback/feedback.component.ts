@@ -1,5 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import {trigger, state, animate, style, transition} from '@angular/core';
+import { trigger, state, animate, style, transition } from '@angular/core';
+
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
 import { AppComponent } from './../../app.component';
 
@@ -34,8 +36,9 @@ import { AppComponent } from './../../app.component';
   ]
 })
 export class FeedbackComponent implements OnInit {
+  isSended: boolean = false;
 
-  constructor(private appComponent: AppComponent) { }
+  constructor(private appComponent: AppComponent, private http: Http) { }
 
   ngOnInit() {
     this.appComponent.isMenuUp = true;
@@ -45,4 +48,11 @@ export class FeedbackComponent implements OnInit {
     this.appComponent.isMenuUp = false;
   }
 
+  sendEmail(name, email, message) {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+
+    this.isSended = true;
+    this.http.post('feedback.php', { name, email, message }, options).subscribe(res => console.log(res));
+  }
 }
